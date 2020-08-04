@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Le falta un boton</title>
+    <link rel="stylesheet" href="css/Principal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <header>
+      <div class="uno">
+        <p>Le falta <br> un boton</p>
+        <img src="images/button_icon.png" alt="">
+      </div>
+      
+
+        <ul class="nav">
+           <li><a href="">Inicio</a></li>
+           <li><a href="">Productos</a>
+              <ul>
+                <li><a href="">Indumentaria</a></li>
+                <li><a href="">Bordados</a>
+                  <ul>
+                    <li><a href="">Parches</a></li>
+                    <li><a href="">Pines</a></li>
+                    <li><a href="">Imanes</a></li>
+                    <li><a href="">Cuadros</a></li>
+                  </ul>
+                </li>
+                
+              </ul>
+            </li>
+            <li>
+              <a href="">Quienes Somos</a>
+            </li>
+      </ul>
+    </header>
+
+    <main>
+      <div class="clasificacion"><h1>Productos destacados</h1></div>
+        <article class="contenedor">
+
+        <aside class="cajas"id="product_0">
+          <img class="producto"  src="images/lefalta/b.jpg" alt=""> 
+          <h1>Pin flores</h1>
+          <p>$0</p> <br>
+          <a href="#">Ver</a>
+          <a href="#">Agregar al carrito</a>
+        </aside>
+        <aside class="cajas" id="product_1">
+          <img class="producto" src="images/lefalta/c.jpg" alt=""> 
+          <h1>Remera</h1>
+          <p>$0</p> <br>
+          <a href="#">Ver</a>
+          <a href="#">Agregar al carrito</a>
+        </aside>
+          <aside class="cajas"id="product_2">
+          <img class="producto"  src="images/lefalta/e.jpg" alt=""> 
+          <h1>Pin Flores</h1>
+          <p>$0</p><br> 
+          <a href="#">Ver</a>
+          <a href="#">Agregar al carrito</a>
+        </aside>
+            <aside class="cajas"id="product_3">
+          <img class="producto"  src="images/lefalta/a.jpg" alt=""> 
+          <h1>Pin Lefalta</h1>
+          <p>$0</p> <br>
+          <a href="#">Ver</a>
+          <a href="#">Agregar al carrito</a>
+        </aside>
+      </article>
+      
+      <p class="verTodo"><a href="#">Ver todo > </a></p>
+      
+      <!-- segunda parte -->
+      <div class="clasificacion"><h1>Indumentaria</h1></div>
+      <article class="contenedor">
+        <aside class="cajas">
+          <img class="producto" src="images/lefalta/b.jpg" alt=""> 
+          <h1>Pin flores</h1>
+          <p>$0</p> <br>
+          <a href="#">Ver</a>
+          <a href="#">Agregar al carrito</a>
+        </aside>
+        <aside class="cajas">
+          <img class="producto" src="images/lefalta/c.jpg" alt=""> 
+          <h1>Remera</h1>
+          <p>$0</p> <br>
+          <a href="#">Ver</a>
+          <a href="#">Agregar al carrito</a>
+        </aside>
+          <aside class="cajas">
+          <img class="producto" src="images/lefalta/e.jpg" alt=""> 
+          <h1>Pin Flores</h1>
+          <p>$0</p><br> 
+          <a href="#">Ver</a>
+          <a href="#">Agregar al carrito</a>
+        </aside>
+            <aside class="cajas">
+          <img class="producto" src="images/lefalta/a.jpg" alt=""> 
+          <h1>Pin Lefalta</h1>
+          <p>$0</p> <br>
+          <a href="#">Ver</a>
+          <a href="#">Agregar al carrito</a>
+        </aside>
+      
+      </article>
+      <p class="verTodo"><a href="#">Ver todo > </a></p>
+      
+      <script>
+        var current = 0;
+        var imagenes = new Array();
+         
+        $(document).ready(function() {
+            var numImages = 8;
+            if (numImages <= 4) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
+            }
+        //  para la izquierda
+            $('.left-arrow').on('click',function() {
+                if (current > 0) {
+                    current = current - 1;
+                } else {
+                    current = numImages - 4;
+                }
+         
+                $(".contenedor").animate( /**/{"left": -($('#cajas_'+current).position().left)}, 600 /**/ );
+         
+                return false;
+            });
+         
+            $('.left-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        //  para la derecha
+            $('.right-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+         
+            $('.right-arrow').on('click', function() {
+                if (numImages > current + 4) {
+                    current = current+1;
+                } else {
+                    current = 0;
+                }
+         
+                $(".contenedor").animate({"left": -($('.cajas_'+current).position().left)}, 600);
+         
+                return false;
+            }); 
+         });
+        </script>  
+    </main>
+    <footer>
+      <!-- <img src="images/lefaltaunboton_copia.png" style="border-radius: 200px; width: 15%;"> -->
+      <div id="circulo">Le falta <br> un boton</div>
+      <div class="formato">
+          <h1>Contacto</h1>
+          <a href="#">lefaltaunboton@gmail.com</a>
+          <a href="#">Whatsapp</a>
+      </div>
+      <div class="formato">
+        <h1>Seguinos</h1>
+        <a href="">Facebook</a>
+        <a href="">Instagram</a>
+      </div>
+    </footer>
+    <div id="autor">Damian Nahuel Villagra - Todos los derechos reservados</div>
+</body>
+</html>

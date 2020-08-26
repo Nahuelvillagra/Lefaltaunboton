@@ -1,10 +1,3 @@
-/* POSICION DEL header */
-header{
-    position:fixed;
-    left:0px;
-    top:0px; 
-    width: 100%;
-}
 
 /* POSICION DEL FOOTER */
 footer{
@@ -15,15 +8,10 @@ footer{
 }
 
 /* PRODUCTOS POR SEPARADO */
-.fotosProducto{
+/* .fotosProducto{
     border: 1px solid;
-    height: 700px;
     width: 50%;
     float: left;
-    /* overflow: scroll; */
-    /* position: absolute; */
-    padding-top: 90px;
-    top: 90px;
 }
 
 .fotosProducto img{
@@ -32,15 +20,63 @@ footer{
 }
 
 .descripcionProducto{
-    border: 1px solid red;
+    border: 1px solid ;
     width: 50%;
-    height: 700px;
     float: left;
-    position: fixed;
-    padding-top: 90px;
-    right: 0px;
-    top: 90px;
-    bottom: 235px;
-}
+} */
 
 /* ************************************************************************* */
+
+/* CARRUSEL */
+
+/* contenedor gigante */
+#principal {
+    float:left;
+    width:200px;
+    overflow:hidden;
+    height:203px;
+    position:relative;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+    
+#principal .izquierda {
+    position:absolute;
+    left:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+    
+#principal .derecha {
+    position:absolute;
+    right:10px;
+    z-index:1;
+    top:50%;
+    margin-top:-9px;
+}
+    
+/* contenedores mas chicos */
+.carrusel {
+    width:4000px;
+    left:0px;
+    position:absolute;
+    z-index:0;
+}
+    
+.carrusel>div {
+    float: left;
+    height: 203px;
+    margin-right: 5px;
+    width: 195px;
+    text-align:center;
+}
+    
+.carrusel img {
+    cursor:pointer;
+}
+    
+.product {
+    border:#CCCCCC 1px solid;
+}
+/* ************************************************************************ */

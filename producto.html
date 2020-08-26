@@ -11,7 +11,6 @@
     <header>
       <div class="uno">
         <p>Le falta <br> un boton</p>
-        <img src="images/button_icon.png" alt="">
       </div>
       
 
@@ -38,12 +37,20 @@
     </header>
 
     <main>
-        <div class="fotosProducto">
-          <img src="images/Lefalta/c.jpg" alt="">
-          <img src="images/Lefalta/b.jpg" alt="">
-          <img src="images/Lefalta/a.jpg" alt="">
-          <img src="images/Lefalta/e.jpg" alt="">
+      <div id="principal">
+        <a href="#" class="izquierda"><img src="images/prev.png" alt="" ></a>
+        <a href="#" class="derecha"><img src="images/next.png" alt=""></a>
+        <div class="carrusel">
+            <div class="product" id="product_0" style="background-color: blue;">0</div>
+            <div class="product" id="product_1" style="background-color: red";> 1</div>
+            <div class="product" id="product_2" style="background-color: violet";>2</div>
+            <div class="product" id="product_3" style="background-color: tomato";>3</div>
+            <div class="product" id="product_4" style="background-color: rosybrown";>4</div>
+            <div class="product" id="product_5" style="background-color: royalblue";>5</div>
+            <div class="product" id="product_6" style="background-color: rgb(235, 130, 81)";>6</div>
+            <div class="product" id="product_7" style="background-color: rgb(255, 0, 140)";>7</div>
         </div>
+    </div>
 
         <div class="descripcionProducto">
           <h1>Ejemplo de titulo de producto</h1>
@@ -56,6 +63,51 @@
         </div>
     </main>
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script>
+var current = 0;
+var imagenes = new Array();
+ 
+$(document).ready(function() {
+    var numImages = 8;
+    if (numImages <= 2) {
+        $('.derecha').css('display', 'none');
+        $('.izquierda').css('display', 'none');
+    }
+//  para la izquierda
+    $('.izquierda').on('click',function() {
+        if (current > 0) {
+            current = current - 1;
+        }  
+        $(".carrusel").animate( {"left": -($('#product_'+current).position().left)}, 200 );
+ 
+        return false;
+    });
+ 
+    $('.izquierda').on('hover', function() {
+        $(this).css('opacity','0.5');
+    }, function() {
+        $(this).css('opacity','1');
+    });
+//  para la derecha
+    $('.derecha').on('hover', function() {$(this).css('opacity','0.5');}, 
+        function() {
+            $(this).css('opacity','1');
+        });
+ 
+    $('.derecha').on('click', function() {
+        if (numImages > current + 1) {
+            current = current+1;
+        } else {
+            // current = 0;
+        }
+ 
+        $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 200);
+ 
+        return false;
+    }); 
+ });
+</script>
+  </script>  
   </body>
   </html>

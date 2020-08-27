@@ -162,6 +162,7 @@ header p{
 
 }
 
+
 .cajas a{
     text-decoration: none;
 }
@@ -210,6 +211,7 @@ footer{
     align-items:center;
     justify-content: space-around;
     padding-left: 8px;
+    bottom: 0;
     /*position: relative;*/
 }
 

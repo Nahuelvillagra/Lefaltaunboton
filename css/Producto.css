@@ -44,7 +44,9 @@ main{
     text-align: center;
     border: none;
     border-radius: 8px;
-    background-color: rgb(255, 255, 169);
+    /* background-color: rgb(255, 255, 169); */
+    background-color: rgb(255, 220, 155);
+
 }
 
 #precio{
@@ -64,7 +66,9 @@ main{
 }
 
 .agregar a:hover{
-    background-color: #fdfd6a;
+    /* background-color: #fdfd6a; */
+    background-color: rgb(255, 203, 107);
+
 }
 
 /* ************************************************************************* */
@@ -74,15 +78,12 @@ main{
 /* contenedor gigante */
 #principal {
     border-radius: 8px;
-    /* margin: 5%; */
     float:left;
     width:600px;
     overflow:hidden;
-    /* height:203px; original*/
     height: 400px;
     position:relative;
     margin-top:2%;
-    /* margin-bottom:20px; */
     margin-left: 3%;
 }
     

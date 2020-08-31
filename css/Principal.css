@@ -81,9 +81,9 @@ header p{
 }
 
 
-.nav > li{
+/* .nav > li{
     
-}
+} */
 
 .nav li a{
     padding:10px 12px;
@@ -109,9 +109,12 @@ header p{
     list-style: none;
     display: none;
     position:absolute;
+    padding-right: 3px;
     /* margin: 0 10px; */
     /* background-color: #fdfd96 ; */
     background-color: rgb(255, 203, 107);
+    border-radius: 5px;
+
 }
 .nav li:hover > ul {
     display:block;
@@ -148,8 +151,8 @@ header p{
     
 }
 .cajas{
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: 1px solid rgb(253, 190, 74);
+    border-bottom: 1px solid rgb(253, 190, 74);
     width: 18%;
     height: 100%;
     display: flex;
@@ -161,6 +164,13 @@ header p{
 
 }
 
+.cajas:hover{
+    border-top: 1px solid rgba(80, 80, 80, 0);
+    border-bottom: 1px solid rgba(80, 80, 80, 0);
+    box-shadow: 2px 2px 2px 2px rgb(253, 190, 74); 
+    transition: 0.3s;
+    border-radius: 8px ;
+}
 
 .cajas a{
     text-decoration: none;
@@ -214,7 +224,9 @@ footer{
     align-items:center;
     justify-content: space-around;
     padding-left: 8px;
-    bottom: 0;
+    width: 100%;
+    /* position: absolute; */
+    /* bottom: 3px; */
     /*position: relative;*/
 }
 
@@ -232,6 +244,7 @@ footer div a{
 footer div a:hover{
     /* background-color: #fdfd6a; */
     background-color: rgb(253, 190, 74);
+    transition: 0.3s;
 }
 
 .formato{
@@ -247,6 +260,9 @@ footer div a:hover{
     background-color: #656655;
     height: 35px;
     font-size: 12px;
+    width: 100%;
+    /* position: absolute; */
+    /* bottom: 3px; */
 }
 
 #autor p{
@@ -264,6 +280,7 @@ footer div a:hover{
 
 #autor a:hover{
     opacity: 0.8;
+    transition: 0.3s;
 }
 
 #redes{
